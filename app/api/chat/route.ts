@@ -4,6 +4,22 @@ import endent from "endent";
 import { OpenAIEmbeddings } from "langchain/embeddings/openai";
 import { SupabaseVectorStore } from "langchain/vectorstores/supabase";
 import { Configuration, OpenAIApi } from "openai-edge";
+import { VercelRequest, VercelResponse } from '@vercel/node'
+import { ChatClient } from 'dapr-client'
+
+export default async function (req: VercelRequest, res: VercelResponse) {
+  console.log('Request method:', req.method)  // Log the request method
+  if (req.method === 'POST') {
+    const { message } = req.body
+    console.log('Message:', message)  // Log the message
+    const client = new ChatClient()
+    const response = await client.sendMessage(message)
+    console.log('Response:', response)  // Log the response
+    res.status(200).json(response)
+  } else {
+    res.status(405).json({ error: 'Method not allowed' })
+  }
+}
 
 export const runtime = "edge";
 
