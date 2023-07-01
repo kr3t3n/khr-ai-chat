@@ -8,16 +8,10 @@ export default function Home() {
   return (
     <div className="mx-auto w-full max-w-[600px] py-2 sm:py-10 flex flex-col stretch text-neutral-50 px-2">
       <div className="text-center">
-        <div className="text-[60px]">🏀</div>
-        <div className="text-4xl font-bold">NBA CBA Chat</div>
-        <div className="mt-3 text-xl">Use AI to ask questions about the new 676-page NBA CBA.</div>
-        <div className="mt-2">Please donate to help us keep the tool online for everyone :)</div>
-        <button
-          className="bg-green-500 hover:bg-green-700 text-white font-bold p-2 rounded h-[40px] mt-4"
-          onClick={() => window.open("https://donate.stripe.com/5kAeWqezzdn6gtWaEF")}
-        >
-          DUNK ON LEBRON
-        </button>
+        <div className="text-[60px]">👩‍💼</div>
+        <div className="text-4xl font-bold">KHR Test</div>
+        <div className="mt-3 text-xl">Use AI to ask questions about the KHR test dataset.</div>
+        
       </div>
 
       {messages.length > 0 ? (
@@ -47,7 +41,7 @@ export default function Home() {
       >
         <input
           className="w-[280px] sm:w-[500px] border border-gray-300 rounded mb-8 shadow-xl p-2 text-black"
-          placeholder="Ask a question about the new NBA CBA..."
+          placeholder="Ask a question about the KHR test data..."
           type="text"
           value={input}
           onChange={handleInputChange}
