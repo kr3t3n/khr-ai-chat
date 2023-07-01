@@ -4,8 +4,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "NBA CBA AI",
-  description: "Use AI to ask questions about the new 676-page NBA CBA."
+  title: "KHR Test data",
+  description: "Use AI to ask questions about the KHR test data."
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
